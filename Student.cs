@@ -9,11 +9,13 @@ namespace DBAssignment_1
     internal class Student
     {
         public int StudentId { get; set; }
+
         public string FName { get; set; } = string.Empty;
         public string LName { get; set; }= string.Empty;
         public string City { get; set; } = string.Empty;
         public string Program {  get; set; } = string.Empty;
         public bool IsActive { get; set; } = true;
+
 
         public Student()
         {
@@ -26,6 +28,7 @@ namespace DBAssignment_1
             City = city;
             Program = program;
 
+
         }
         internal Student AddNewStudent()
         {
@@ -35,6 +38,7 @@ namespace DBAssignment_1
             string program = Utility.GetInputProgram();
             return new Student(fname, lname, city, program);
             
+
 
 
         }
