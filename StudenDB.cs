@@ -10,7 +10,7 @@ namespace DBAssignment_1
     internal class StudenDB:DbContext
     {
         //Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=DBAssignment1;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False
-        internal DbSet<Student> students {  get; set; }
+        public DbSet<Student>? students {  get; set; }
         private string ConnectinString { get; set; } = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=DBAssignment1;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
