@@ -35,8 +35,7 @@ namespace DBAssignment_1
             string program = Utility.GetInputProgram();
             return new Student(fname, lname, city, program);
             
-
-
         }
+
     }
 }
