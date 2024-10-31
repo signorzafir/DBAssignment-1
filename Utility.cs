@@ -8,6 +8,7 @@ namespace DBAssignment_1
 {
     internal static class Utility
     {
+
         public static int GetIntInput()
         {
 

@@ -6,6 +6,14 @@ using System.Threading.Tasks;
 
 namespace DBAssignment_1
 {
+    enum MenuChoice
+    {
+        AddNew = 1,
+        ChangeData = 2, 
+        Delete = 3, 
+        PrintAll = 4, 
+        CloseProgram =5
+    }
     internal static class Menu
     {
 
