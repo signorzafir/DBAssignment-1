@@ -8,6 +8,7 @@ namespace DBAssignment_1
 {
     internal static class Menu
     {
+
         internal static int MainMenu()
         {
 
@@ -24,5 +25,8 @@ namespace DBAssignment_1
 
 
         }
+
+
+
     }
 }
