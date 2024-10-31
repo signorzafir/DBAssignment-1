@@ -8,5 +8,6 @@ namespace DBAssignment_1
 {
     internal static class Menu
     {
+
     }
 }
