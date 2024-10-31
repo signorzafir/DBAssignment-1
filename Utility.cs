@@ -62,9 +62,6 @@ namespace DBAssignment_1
             return input;
         }
 
-
-
-
         public static void GoBackToMenu()
         {
             Console.Write("Press Enter to go back to Menu. ");
