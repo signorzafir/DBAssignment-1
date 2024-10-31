@@ -8,13 +8,24 @@ namespace DBAssignment_1
 {
     internal class Student
     {
-        internal int id { get; set; }
-        internal string FName { get; set; } = "";
-        internal string LName { get; set; } = "";
-        public Student(string fName, string lName)
+        public int StudentId { get; set; }
+        internal string FName { get; set; } = string.Empty;
+        internal string LName { get; set; }= string.Empty;
+        internal string City { get; set; } = string.Empty;
+        internal string Program {  get; set; } = string.Empty;
+        internal bool IsActive { get; set; } = true;
+
+        public Student()
+        {
+            
+        }
+        public Student(string fName, string lName, string city, string program)
         {
             FName = fName;
             LName = lName;
+            City = city;
+            Program = program;
+
         }
     }
 }
