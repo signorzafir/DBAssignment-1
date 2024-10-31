@@ -49,6 +49,21 @@ namespace DBAssignment_1
             string input = GetStringInput();
             return input;
         }
+        public static string GetInputCity()
+        {
+            Console.Write("Enter City: ");
+            string input = GetStringInput();
+            return input;
+        }
+        public static string GetInputProgram()
+        {
+            Console.Write("Enter Program's name: ");
+            string input = GetStringInput();
+            return input;
+        }
+
+
+
 
         public static void GoBackToMenu()
         {
