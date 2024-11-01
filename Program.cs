@@ -20,6 +20,7 @@
                 case MenuChoice.Delete:
                     break;
                 case MenuChoice.PrintAll:
+                    student.PrintAllStudents();
                     break;
                 case MenuChoice.CloseProgram:
                     break;
