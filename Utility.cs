@@ -8,6 +8,7 @@ namespace DBAssignment_1
 {
     internal static class Utility
     {
+
         public static int GetIntInput()
         {
 
@@ -45,6 +46,18 @@ namespace DBAssignment_1
         public static string GetInputLastName()
         {
             Console.Write("Enter Last Name: ");
+            string input = GetStringInput();
+            return input;
+        }
+        public static string GetInputCity()
+        {
+            Console.Write("Enter City: ");
+            string input = GetStringInput();
+            return input;
+        }
+        public static string GetInputProgram()
+        {
+            Console.Write("Enter Program's name: ");
             string input = GetStringInput();
             return input;
         }
