@@ -3,30 +3,41 @@
     internal class Program
     {
         static void Main(string[] args)
-        {            
+        {
             var student = new Student();
             var stdContext = new StudenDB();
-            int UserChoice = Menu.MainMenu();
-            MenuChoice menuChoice = (MenuChoice)UserChoice;
-            switch (menuChoice)
+            int UserChoice;
+            MenuChoice menuChoice;
+            while (true)
             {
-                case MenuChoice.AddNew:
-                    var std = student.AddNewStudent();
-                    stdContext.Add(std);
-                    stdContext.SaveChanges();
-                    break;
-                case MenuChoice.ChangeData:
 
-                    break;
-                case MenuChoice.Delete:
-                    break;
-                case MenuChoice.PrintAll:
-                    student.PrintAllStudents();
-                    break;
-                case MenuChoice.CloseProgram:
-                    break;
-                default:
-                    break;
+                UserChoice = Menu.MainMenu();
+                menuChoice = (MenuChoice)UserChoice;
+                switch (menuChoice)
+                {
+                    case MenuChoice.AddNew:
+                        student.AddNewStudent();
+                        Utility.GoBackToMenu();
+                        break;
+                    case MenuChoice.ChangeData:
+                        student.UpdateStudentData();
+                        Utility.GoBackToMenu();                        
+                        break;
+                    
+                    case MenuChoice.PrintAll:
+                        student.PrintAllStudents();
+                        Utility.GoBackToMenu();
+                        break;
+                    case MenuChoice.CloseProgram:
+                        Environment.Exit(0);
+                        break;
+                    default:
+                        Console.WriteLine("Unknown Input !!!");
+                        Utility.GoBackToMenu();
+
+                        break;
+                }
+
             }
         }
     }
