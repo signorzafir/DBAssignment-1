@@ -10,6 +10,7 @@
             MenuChoice menuChoice;
             while (true)
             {
+
                 UserChoice = Menu.MainMenu();
                 menuChoice = (MenuChoice)UserChoice;
                 switch (menuChoice)
@@ -36,6 +37,7 @@
 
                         break;
                 }
+
             }
         }
     }
