@@ -26,8 +26,6 @@ namespace DBAssignment_1
             Console.Write("Choose Task from above to perform: ");
             int choice = Utility.GetIntInput();
             return choice;
-
-
         }        
     }
 }
