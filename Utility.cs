@@ -11,7 +11,6 @@ namespace DBAssignment_1
 
         public static int GetIntInput()
         {
-
             while (true)
             {
                 string? input = Console.ReadLine();
@@ -25,11 +24,9 @@ namespace DBAssignment_1
         }
         public static string GetStringInput()
         {
-
             while (true)
             {
                 string? input = Console.ReadLine();
-
                 if (!string.IsNullOrEmpty(input))
                 {
                     return input;
@@ -61,7 +58,6 @@ namespace DBAssignment_1
             string input = GetStringInput();
             return input;
         }
-
         public static void GoBackToMenu()
         {
             Console.Write("Press Enter to go back to Menu. ");

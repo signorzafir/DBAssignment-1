@@ -16,8 +16,6 @@ namespace DBAssignment_1
         public string City { get; set; } = string.Empty;
         public string Program { get; set; } = string.Empty;
         public bool IsActive { get; set; } = true;
-
-
         public Student()
         {
 
@@ -28,8 +26,6 @@ namespace DBAssignment_1
             LName = lName;
             City = city;
             Program = program;
-
-
         }
         public override string? ToString()
         {
