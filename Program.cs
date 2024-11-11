@@ -5,27 +5,26 @@
         static void Main(string[] args)
         {
             var student = new Student();
-            var stdContext = new StudenDB();
+            var studentManager = new StudentManager();
             int UserChoice;
             MenuChoice menuChoice;
             while (true)
             {
-
                 UserChoice = Menu.MainMenu();
                 menuChoice = (MenuChoice)UserChoice;
                 switch (menuChoice)
                 {
                     case MenuChoice.AddNew:
-                        student.AddNewStudent();
+                        studentManager.AddNewStudent();
                         Utility.GoBackToMenu();
                         break;
                     case MenuChoice.ChangeData:
-                        student.UpdateStudentData();
+                        studentManager.UpdateStudentData();
                         Utility.GoBackToMenu();                        
                         break;
                     
                     case MenuChoice.PrintAll:
-                        student.PrintAllStudents();
+                        studentManager.PrintAllStudents();
                         Utility.GoBackToMenu();
                         break;
                     case MenuChoice.CloseProgram:

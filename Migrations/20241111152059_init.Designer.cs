@@ -3,16 +3,19 @@ using DBAssignment_1;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
 namespace DBAssignment_1.Migrations
 {
-    [DbContext(typeof(StudenDB))]
-    partial class StudenDBModelSnapshot : ModelSnapshot
+    [DbContext(typeof(StudentDbContext))]
+    [Migration("20241111152059_init")]
+    partial class init
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -28,7 +31,6 @@ namespace DBAssignment_1.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("StudentId"));
-
 
                     b.Property<string>("City")
                         .IsRequired()
@@ -48,7 +50,6 @@ namespace DBAssignment_1.Migrations
                     b.Property<string>("Program")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
 
                     b.HasKey("StudentId");
 
