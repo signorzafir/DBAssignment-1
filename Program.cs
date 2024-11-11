@@ -5,14 +5,11 @@
         static void Main(string[] args)
         {
             var student = new Student();
-            //var stdContext = new StudentDbContext();
             var studentManager = new StudentManager();
-
             int UserChoice;
             MenuChoice menuChoice;
             while (true)
             {
-
                 UserChoice = Menu.MainMenu();
                 menuChoice = (MenuChoice)UserChoice;
                 switch (menuChoice)

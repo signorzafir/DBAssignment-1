@@ -17,7 +17,6 @@ namespace DBAssignment_1
     {
         internal static int MainMenu()
         {
-
             Console.WriteLine("!!! Student Register !!!");
             Console.WriteLine("" +
                 "1- Register new student in Database.\n" +
@@ -29,10 +28,6 @@ namespace DBAssignment_1
             return choice;
 
 
-        }
-        
-
-
-
+        }        
     }
 }

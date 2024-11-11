@@ -24,7 +24,6 @@ namespace DBAssignment_1
         }
         internal void PrintAllStudents()
         {
-            //var stdContext = new StudentDbContext();
             if (stdCtx.students != null)
             {
                 foreach (var std in stdCtx.students)
@@ -39,7 +38,6 @@ namespace DBAssignment_1
         }
         internal void UpdateStudentData()
         {
-            //var stdContext = new StudentDbContext();
             string studentToChange;
             int userChoice;
             Console.WriteLine("Enter student you want to change.");
