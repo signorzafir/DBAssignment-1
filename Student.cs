@@ -33,7 +33,7 @@ namespace DBAssignment_1
         }
         internal void AddNewStudent()
         {
-            var stdContext = new StudenDB();
+            var stdContext = new StudentDbContext();
             string fname = Utility.GetInputFirstName();
             string lname = Utility.GetInputLastName();
             string city = Utility.GetInputCity();
@@ -44,7 +44,7 @@ namespace DBAssignment_1
         }
         internal void PrintAllStudents()
         {
-            var stdContext = new StudenDB();
+            var stdContext = new StudentDbContext();
             if (stdContext.students != null)
             {
                 foreach (var std in stdContext.students)
@@ -71,7 +71,7 @@ namespace DBAssignment_1
         }
         internal void UpdateStudentData()
         {
-            var stdContext = new StudenDB();
+            var stdContext = new StudentDbContext();
             string studentToChange;
             int userChoice;
             Console.WriteLine("Enter student you want to change.");

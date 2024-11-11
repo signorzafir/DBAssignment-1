@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             var student = new Student();
-            var stdContext = new StudenDB();
+            var stdContext = new StudentDbContext();
             int UserChoice;
             MenuChoice menuChoice;
             while (true)
