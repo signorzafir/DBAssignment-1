@@ -5,7 +5,9 @@
         static void Main(string[] args)
         {
             var student = new Student();
-            var stdContext = new StudentDbContext();
+            //var stdContext = new StudentDbContext();
+            var studentManager = new StudentManager();
+
             int UserChoice;
             MenuChoice menuChoice;
             while (true)
@@ -16,16 +18,16 @@
                 switch (menuChoice)
                 {
                     case MenuChoice.AddNew:
-                        student.AddNewStudent();
+                        studentManager.AddNewStudent();
                         Utility.GoBackToMenu();
                         break;
                     case MenuChoice.ChangeData:
-                        student.UpdateStudentData();
+                        studentManager.UpdateStudentData();
                         Utility.GoBackToMenu();                        
                         break;
                     
                     case MenuChoice.PrintAll:
-                        student.PrintAllStudents();
+                        studentManager.PrintAllStudents();
                         Utility.GoBackToMenu();
                         break;
                     case MenuChoice.CloseProgram:
