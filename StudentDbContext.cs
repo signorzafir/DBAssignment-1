@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,14 +8,17 @@ using System.Threading.Tasks;
 
 namespace DBAssignment_1
 {
-    internal class StudentDbContext:DbContext
+    internal class StudentDbContext : DbContext
     {
         //Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=DBAssignment1;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False
-        public DbSet<Student>? students {  get; set; }
-        private string ConnectinString { get; set; } = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=DBAssignment1;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
+        public DbSet<Student>? students { get; set; }
+        //private string ConnectinString { get; set; } = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=DBAssignment1;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(ConnectinString);
+            optionsBuilder.UseSqlServer(new ConfigurationBuilder()
+                               .AddJsonFile("appSettings.json")
+                               .Build()
+                               .GetSection("ConnectionStrings")["StudentDb"]);
         }
     }
 }
